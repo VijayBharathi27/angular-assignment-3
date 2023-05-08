@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-assignment-2';
-  username = '';
-  reset() {
-    this.username = '';
+  visibility = true;
+  logs = [];
+  n = 0;
+  onToggle() {
+    this.logs.push(++this.n);
+    this.visibility = !this.visibility;
   }
 }
