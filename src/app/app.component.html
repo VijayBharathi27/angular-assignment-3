@@ -1,5 +1,11 @@
 <button (click)="onToggle()">Display Details</button>
 <p *ngIf="visibility">Hi there click the above btn to hide me!</p>
-<ul>
-<li *ngFor="let num of logs" [ngClass]="{'font-white':num>4}" [ngStyle]="{'background-color':num>4?'blue':'None'}">{{num}}</li>
-</ul>
+<div>
+  <p
+    *ngFor="let num of logs; let i = index"
+    [ngClass]="{ 'font-white': i >= 4 }"
+    [ngStyle]="{ 'background-color': i >= 4 ? 'blue' : 'None' }"
+  >
+    {{ num }}
+  </p>
+</div>

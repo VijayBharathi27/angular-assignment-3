@@ -8,9 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   visibility = true;
   logs = [];
-  n = 0;
   onToggle() {
-    this.logs.push(++this.n);
+    this.logs.push(new Date());
     this.visibility = !this.visibility;
   }
 }
